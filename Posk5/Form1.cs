@@ -16,5 +16,29 @@ namespace Posk5
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if (textBox1.Text == "admin" && textBox2.Text == "admin")
+            {
+                Form2 mustGoOn = new Form2();
+                mustGoOn.Show();
+                this.Hide();
+            }
+            else
+            {
+                
+                MessageBox.Show("Nieprawidłowy login lub hasło!");
+                textBox1.Clear();
+                textBox2.Clear();
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
